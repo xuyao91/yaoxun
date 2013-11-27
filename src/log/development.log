@@ -1,0 +1,96 @@
+
+
+Started GET "/app/couriers" for 127.0.0.1 at 2013-11-23 23:05:03 +0800
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (uninitialized constant BaseController):
+  app/controllers/app/couriers_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/xuyao/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/app/couriers" for 127.0.0.1 at 2013-11-23 23:06:27 +0800
+
+ActionController::RoutingError (uninitialized constant BaseController):
+  app/controllers/app/couriers_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/xuyao/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/app/couriers" for 127.0.0.1 at 2013-11-23 23:06:30 +0800
+
+ActionController::RoutingError (uninitialized constant BaseController):
+  app/controllers/app/couriers_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/xuyao/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/app/couriers" for 127.0.0.1 at 2013-11-23 23:06:56 +0800
+
+ActionController::RoutingError (uninitialized constant BaseController):
+  app/controllers/app/couriers_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/xuyao/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/app/couriers" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Processing by App::CouriersController#index as HTML
+  Rendered app/couriers/index.html.erb within layouts/application (0.4ms)
+Compiled app/base.css  (25ms)  (pid 6405)
+Compiled app/couriers.css  (1ms)  (pid 6405)
+Compiled application.css  (57ms)  (pid 6405)
+Compiled jquery.js  (3ms)  (pid 6405)
+Compiled jquery_ujs.js  (0ms)  (pid 6405)
+Compiled app/base.js  (353ms)  (pid 6405)
+Compiled app/couriers.js  (86ms)  (pid 6405)
+Compiled application.js  (524ms)  (pid 6405)
+Completed 200 OK in 597ms (Views: 596.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/app/base.css?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /app/base.css - 200 OK (21ms)
+
+
+Started GET "/assets/app/couriers.css?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /app/couriers.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/app/base.js?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /app/base.js - 200 OK (2ms)
+
+
+Started GET "/assets/app/couriers.js?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /app/couriers.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-23 23:07:26 +0800
+Served asset /application.js - 200 OK (7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (211.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (334.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateCouriers (20131125060552)
+  [1m[35m (96.4ms)[0m  CREATE TABLE `couriers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `wx_user_id` int(11) NOT NULL, `odd_num` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (43.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131125060552')[0m
+Migrating to CreateWxUsers (20131125060820)
+  [1m[35m (99.5ms)[0m  CREATE TABLE `wx_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uid` varchar(255) NOT NULL, `location_x` varchar(255), `location_y` varchar(255), `location_updated_at` datetime, `location_label` varchar(255), `tel` varchar(255), `address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (44.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131125060820')[0m
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
