@@ -94,3 +94,5 @@ Migrating to CreateWxUsers (20131125060820)
   [1m[35m (99.5ms)[0m  CREATE TABLE `wx_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `uid` varchar(255) NOT NULL, `location_x` varchar(255), `location_y` varchar(255), `location_updated_at` datetime, `location_label` varchar(255), `tel` varchar(255), `address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
   [1m[36m (44.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131125060820')[0m
   [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

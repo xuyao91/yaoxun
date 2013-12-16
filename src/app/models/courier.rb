@@ -1,5 +1,16 @@
 class Courier < ActiveRecord::Base
-  # attr_accessible :title, :body
+  validates :odd_num,:wx_user_id, :presence => true
+  attr_accessible :wx_user_id, :odd_num
+  #validate :example_valid_4_base
+
+  def example_valid
+    #errors.add(:odd_num, "can't be blank") unless self.odd_num.present?
+    errors[:odd_num] =  "can't be blank too" unless self.odd_num.present?
+  end  
+
+  def example_valid_4_base
+    errors[:base] << "test error message!!!"
+  end  
 
   def search
     message = []
